@@ -1,0 +1,92 @@
+#include "ofApp.h"
+
+#include "Balletjes.h"
+//#include "Vierkantjes.h"
+
+Balletjes balletjes;
+//Vierkantjes vierkantjes;
+//--------------------------------------------------------------
+void ofApp::setup() {
+  // balletjes.setup();
+
+    hoeveelheid = 30;
+
+   for (int t = 0; t <hoeveelheid; t++) {
+    Balletjes newballetjes;
+    newballetjes.setup();
+    Meer.push_back(newballetjes);
+
+   }
+  // for (int t = 0; t <hoeveelheid; t++) {
+   // Vierkantjes newvierkantjes;
+   // newvierkantjes.setup();
+   // Nogmeer.push_back(newvierkantjes);
+
+}
+
+//}
+
+void ofApp::update() {
+    //balletjes.update();
+    for (int t = 0; t <hoeveelheid; t++) {
+        Meer [t].update();
+    //    Nogmeer [t].update();
+
+    }
+}
+//--------------------------------------------------------------
+void ofApp::draw() {
+  //  vierkantjes.draw();
+    balletjes.draw();
+    for (int t = 0; t <hoeveelheid; t++) {
+        Meer [t].draw();
+    //    Nogmeer [t].draw();
+
+    }
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyReleased(int key) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y ) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mousePressed(int x, int y, int button) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::windowResized(int w, int h) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo) {
+
+}
